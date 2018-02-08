@@ -1,0 +1,96 @@
+<h2>Категории</h2>
+{{name}}
+<div class="container">
+            <form action="/users/vote" method="post">
+                <h1 class="display-3">{{ctg.actor.title}}</h1>
+                <p class="lead">
+                    <fieldset class="form-group">
+                        <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="best_actor"  value="{{ctg.actor.name1}}"     >
+                            <h3>{{ctg.actor.name1}}</h3>
+                        </label>
+                        </div>
+                        <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="best_actor"  value="{{ctg.actor.name2}}">
+                            <h3>{{ctg.actor.name2}}</h3>
+                        </label>
+                        </div>
+                        <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="best_actor"  value="{{ctg.actor.name3}}" >
+                            <h3>{{ctg.actor.name3}}</h3>
+                        </label>
+                        </div>
+                        <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="best_actor"  value="{{ctg.actor.name4}}" >
+                            <h3>{{ctg.actor.name4}}</h3>
+                        </label>
+                        </div>
+                    </fieldset>
+                </p>
+
+                <h1 class="display-3">{{ctg.actress.title}}</h1>
+                <p class="lead">
+                    <fieldset class="form-group">
+                        <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="best_actress"  value="{{ctg.actress.name1}}" >
+                            <h3>{{ctg.actress.name1}}</h3>
+                        </label>
+                        </div>
+                        <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="best_actress"  value="{{ctg.actress.name2}}">
+                            <h3>{{ctg.actress.name2}}</h3>
+                        </label>
+                        </div>
+                        <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="best_actress" value="{{ctg.actress.name3}}" >
+                            <h3>{{ctg.actress.name3}}</h3>
+                        </label>
+                        </div>
+                        <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="best_actress"  value="{{ctg.actress.name4}}" >
+                            <h3>{{ctg.actress.name4}}</h3>
+                        </label>
+                        </div>
+                    </fieldset>
+                </p>
+
+                <h1 class="display-3">{{ctg.performance.title}}</h1>
+                <p class="lead">
+                    <fieldset class="form-group">
+                        <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="best_performance"  value="{{ctg.performance.name1}}" >
+                            <h3>{{ctg.performance.name1}}</h3>
+                        </label>
+                        </div>
+                        <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="best_performance"  value="{{ctg.performance.name2}}">
+                            <h3>{{ctg.performance.name2}}</h3>
+                        </label>
+                        </div>
+                        <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="best_performance" value="{{ctg.performance.name3}}" >
+                            <h3>{{ctg.performance.name3}}</h3>
+                        </label>
+                        </div>
+                        <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="best_performance"  value="{{ctg.performance.name4}}" >
+                            <h3>{{ctg.performance.name4}}</h3>
+                        </label>
+                        </div>
+                    </fieldset>
+                </p>
+                <button type="submit" class="btn btn-primary btn-lg ">Гласувай</button>
+            </form>
+</div>

@@ -1,0 +1,30 @@
+<div class="registration_page">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="card card-body form px-5 register_form">
+                    <div class="page-title text-center my-5">Login</div>
+                    {{msg}}
+                    {{#if hasErrors}}
+                        <div class="alert alert-danger">
+                            {{#each messages }}
+                                <p>{{this}}</p>
+                            {{/each }}
+                        </div>
+                    {{/if }}
+                    <form action="/users/login" method="post">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" name="email"  value = "{{email}}" >
+                        </div>        
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" name="password" >
+                        </div>
+                        <button type="submit" class="btn btn-block my-5 butn">Log In</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
