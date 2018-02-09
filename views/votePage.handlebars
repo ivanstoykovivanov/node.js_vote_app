@@ -1,96 +1,192 @@
-<h2>Категории</h2>
-{{name}}
-<div class="container">
-            <form action="/users/vote" method="post">
-                <h1 class="display-3">{{ctg.actor.title}}</h1>
-                <p class="lead">
-                    <fieldset class="form-group">
-                        <div class="form-check">
-                        <label class="form-check-label">
-                            <input type="radio" class="form-check-input" name="best_actor"  value="{{ctg.actor.name1}}"     >
-                            <h3>{{ctg.actor.name1}}</h3>
-                        </label>
-                        </div>
-                        <div class="form-check">
-                        <label class="form-check-label">
-                            <input type="radio" class="form-check-input" name="best_actor"  value="{{ctg.actor.name2}}">
-                            <h3>{{ctg.actor.name2}}</h3>
-                        </label>
-                        </div>
-                        <div class="form-check">
-                        <label class="form-check-label">
-                            <input type="radio" class="form-check-input" name="best_actor"  value="{{ctg.actor.name3}}" >
-                            <h3>{{ctg.actor.name3}}</h3>
-                        </label>
-                        </div>
-                        <div class="form-check">
-                        <label class="form-check-label">
-                            <input type="radio" class="form-check-input" name="best_actor"  value="{{ctg.actor.name4}}" >
-                            <h3>{{ctg.actor.name4}}</h3>
-                        </label>
-                        </div>
-                    </fieldset>
-                </p>
-
-                <h1 class="display-3">{{ctg.actress.title}}</h1>
-                <p class="lead">
-                    <fieldset class="form-group">
-                        <div class="form-check">
-                        <label class="form-check-label">
-                            <input type="radio" class="form-check-input" name="best_actress"  value="{{ctg.actress.name1}}" >
-                            <h3>{{ctg.actress.name1}}</h3>
-                        </label>
-                        </div>
-                        <div class="form-check">
-                        <label class="form-check-label">
-                            <input type="radio" class="form-check-input" name="best_actress"  value="{{ctg.actress.name2}}">
-                            <h3>{{ctg.actress.name2}}</h3>
-                        </label>
-                        </div>
-                        <div class="form-check">
-                        <label class="form-check-label">
-                            <input type="radio" class="form-check-input" name="best_actress" value="{{ctg.actress.name3}}" >
-                            <h3>{{ctg.actress.name3}}</h3>
-                        </label>
-                        </div>
-                        <div class="form-check">
-                        <label class="form-check-label">
-                            <input type="radio" class="form-check-input" name="best_actress"  value="{{ctg.actress.name4}}" >
-                            <h3>{{ctg.actress.name4}}</h3>
-                        </label>
-                        </div>
-                    </fieldset>
-                </p>
-
-                <h1 class="display-3">{{ctg.performance.title}}</h1>
-                <p class="lead">
-                    <fieldset class="form-group">
-                        <div class="form-check">
-                        <label class="form-check-label">
-                            <input type="radio" class="form-check-input" name="best_performance"  value="{{ctg.performance.name1}}" >
-                            <h3>{{ctg.performance.name1}}</h3>
-                        </label>
-                        </div>
-                        <div class="form-check">
-                        <label class="form-check-label">
-                            <input type="radio" class="form-check-input" name="best_performance"  value="{{ctg.performance.name2}}">
-                            <h3>{{ctg.performance.name2}}</h3>
-                        </label>
-                        </div>
-                        <div class="form-check">
-                        <label class="form-check-label">
-                            <input type="radio" class="form-check-input" name="best_performance" value="{{ctg.performance.name3}}" >
-                            <h3>{{ctg.performance.name3}}</h3>
-                        </label>
-                        </div>
-                        <div class="form-check">
-                        <label class="form-check-label">
-                            <input type="radio" class="form-check-input" name="best_performance"  value="{{ctg.performance.name4}}" >
-                            <h3>{{ctg.performance.name4}}</h3>
-                        </label>
-                        </div>
-                    </fieldset>
-                </p>
-                <button type="submit" class="btn btn-primary btn-lg ">Гласувай</button>
-            </form>
-</div>
+<div class="vote-page">
+    <h2 class="animated slideInUp">Категории</h2>
+    <form action="/users/vote" method="post">
+        <div class="category animated fadeInLeft">
+            <div class="title">{{ctg.actor.title}}</div>
+            <p class="lead">
+                <fieldset class="form-group">
+                    <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="best_actor"  value="{{ctg.actor.name1}}"     >
+                        <div class="nominee">{{ctg.actor.name1}}</div>
+                    </label>
+                    </div>
+                    <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="best_actor"  value="{{ctg.actor.name2}}">
+                            <div class="nominee">{{ctg.actor.name2}}</div>
+                    </label>
+                    </div>
+                    <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="best_actor"  value="{{ctg.actor.name3}}" >
+                            <div class="nominee">{{ctg.actor.name3}}</div>
+                    </label>
+                    </div>
+                    <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="best_actor"  value="{{ctg.actor.name4}}" >
+                            <div class="nominee">{{ctg.actor.name4}}</div>
+                    </label>
+                    </div>
+                </fieldset>
+            </p>
+        </div>
+        <div class="category animated fadeInRight">
+            <div class="title">{{ctg.actress.title}}</div>
+            <p class="lead">
+                <fieldset class="form-group">
+                    <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="best_actor"  value="{{ctg.actor.name1}}"     >
+                        <div class="nominee">{{ctg.actress.name1}}</div>
+                    </label>
+                    </div>
+                    <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="best_actor"  value="{{ctg.actor.name2}}">
+                        <div class="nominee">{{ctg.actress.name2}}</div>
+                    </label>
+                    </div>
+                    <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="best_actor"  value="{{ctg.actor.name3}}" >
+                        <div class="nominee">{{ctg.actress.name3}}</div>
+                    </label>
+                    </div>
+                    <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="best_actor"  value="{{ctg.actor.name4}}" >
+                        <div class="nominee">{{ctg.actress.name4}}</div>
+                    </label>
+                    </div>
+                </fieldset>
+            </p>
+        </div>
+        <div class="category animated fadeInLeftBig">
+            <div class="title">{{ctg.performance.title}}</div>
+            <p class="lead">
+                <fieldset class="form-group">
+                    <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="best_actor"  value="{{ctg.actor.name1}}"     >
+                        <div class="nominee">{{ctg.performance.name1}}</div>
+                    </label>
+                    </div>
+                    <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="best_actor"  value="{{ctg.actor.name2}}">
+                        <div class="nominee">{{ctg.performance.name2}}</div>
+                    </label>
+                    </div>
+                    <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="best_actor"  value="{{ctg.actor.name3}}" >
+                        <div class="nominee">{{ctg.performance.name3}}</div>
+                    </label>
+                    </div>
+                    <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="best_actor"  value="{{ctg.actor.name4}}" >
+                        <div class="nominee">{{ctg.performance.name4}}</div>
+                    </label>
+                    </div>
+                </fieldset>
+            </p>
+        </div>
+        <div class="category animated fadeInRight">
+            <div class="title">Най-добър актьор</div>
+            <p class="lead">
+                <fieldset class="form-group">
+                    <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="best_actor"  value="{{ctg.actor.name1}}"     >
+                        <div class="nominee">Пламен</div>
+                    </label>
+                    </div>
+                    <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="best_actor"  value="{{ctg.actor.name2}}">
+                            <div class="nominee">Гопето</div>
+                    </label>
+                    </div>
+                    <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="best_actor"  value="{{ctg.actor.name3}}" >
+                            <div class="nominee">Ким</div>
+                    </label>
+                    </div>
+                    <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="best_actor"  value="{{ctg.actor.name4}}" >
+                            <div class="nominee">Марко</div>
+                    </label>
+                    </div>
+                </fieldset>
+            </p>
+        </div>
+        <div id="categoryAnime" class="category">
+            <div class="title">Най-добър актьор</div>
+            <p class="lead">
+                <fieldset class="form-group">
+                    <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="best_actor"  value="{{ctg.actor.name1}}"     >
+                        <div class="nominee">Пламен</div>
+                    </label>
+                    </div>
+                    <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="best_actor"  value="{{ctg.actor.name2}}">
+                        <div class="nominee">Гопето</div>
+                    </label>
+                    </div>
+                    <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="best_actor"  value="{{ctg.actor.name3}}" >
+                        <div class="nominee">Ким</div>
+                    </label>
+                    </div>
+                    <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="best_actor"  value="{{ctg.actor.name4}}" >
+                        <div class="nominee">Марко</div>
+                    </label>
+                    </div>
+                </fieldset>
+            </p>
+        </div>
+        <div class="category animated FadeInDown">
+            <div class="title">Най-добър актьор</div>
+            <p class="lead">
+                <fieldset class="form-group">
+                    <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="best_actor"  value="{{ctg.actor.name1}}"     >
+                        <div class="nominee">Пламен</div>
+                    </label>
+                    </div>
+                    <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="best_actor"  value="{{ctg.actor.name2}}">
+                        <div class="nominee">Гопето</div>
+                    </label>
+                    </div>
+                    <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="best_actor"  value="{{ctg.actor.name3}}" >
+                        <div class="nominee">Ким</div>
+                    </label>
+                    </div>
+                    <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="best_actor"  value="{{ctg.actor.name4}}" >
+                        <div class="nominee">Марко</div>
+                    </label>
+                    </div>
+                </fieldset>
+            </p>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg">Гласувай</button>
+    </div>
+    

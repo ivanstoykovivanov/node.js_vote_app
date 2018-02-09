@@ -52,6 +52,14 @@ body{
     color: rgb(214, 185, 105); 
 }
 
+/*  VOTING PAGE  */ 
+
+.vote-page{
+    background-color: rgb(31, 58, 58); 
+    color: white; 
+}
+
+
  #actresses,   {
     height: 100%; 
     width: 100%; 
